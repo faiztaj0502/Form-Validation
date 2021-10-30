@@ -64,7 +64,7 @@ export const RegistrationForm = () => {
             <button
               className="btn btn-dark mt-3"
               type="submit"
-              disabled={!(formik.isValid && formik.dirty)}
+              // disabled={!(formik.isValid && formik.dirty)}
             >
               Submit
             </button>
