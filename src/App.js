@@ -1,18 +1,23 @@
+import React from "react";
 import { Provider } from "react-redux";
 import { RegistrationForm } from "./components/RegistrationForm";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
 import "./App.css";
 
-function App() {
+export const App = () =>{
   return (
-    <div className="app">
-      <center>
-        <h1>Registration Form</h1>
-      </center>
-      <RegistrationForm />
-    </div>
-  );
+    <React.Fragment>
+      
+        <Router>
+          <Switch>
+            <Route path="/">
+              <RegistrationForm/>
+            </Route>
+          </Switch>
+        </Router>
+      
+    </React.Fragment>
+  )
 }
 
-export default App;
+// export default App;

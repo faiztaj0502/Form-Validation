@@ -11,15 +11,15 @@ export const RegistrationForm = () => {
       .min(3, "Must be 3 characters or less")
       .max(16, "Must be 16 characters or less")
       .required("Required *"),
-    lastName: Yup.string()
+      Username: Yup.string()
       .min(3, "Must be 3 characters or less")
       .max(16, "Must be 16 characters or less")
       .required("Required *"),
-    email: Yup.string().email("Email is invalid").required("Email is required"),
+    // email: Yup.string().email("Email is invalid").required("Email is required"),
     contact: Yup.string()
       .min(10, "Enter valid mobile number")
       .required("Phone number is required *")
-      .matches(phonenumber, "Inter valid mobile number"),
+      .matches(phonenumber, "Enter valid mobile number"),
     password: Yup.string()
       .min(6, "Password must be at least 6 charaters")
       .required("Password is required *"),
@@ -31,8 +31,8 @@ export const RegistrationForm = () => {
     <Formik
       initialValues={{
         firstName: "",
-        lastName: "",
-        email: "",
+        Username: "",
+        // Username: "",
         contact: "",
         password: "",
         confirmPassword: "",
@@ -64,7 +64,7 @@ export const RegistrationForm = () => {
             <button
               className="btn btn-dark mt-3"
               type="submit"
-              // disabled={!(formik.isValid && formik.dirty)}
+              disabled={!(formik.isValid && formik.dirty)}
             >
               Submit
             </button>
